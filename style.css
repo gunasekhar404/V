@@ -1,0 +1,681 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --bg-color: rgb(15, 15, 15);
+    --second-bg-color: #161616;
+    --text-color: white;
+    --main-color:#e415ff;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.navbar a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    }
+    .navbar a:hover,
+    .navbar a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}
+.Me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+.Me-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+span{
+    color: var(--main-color);
+}
+.logo span{
+    color: var(--main-color);
+}
+.Me-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+    font-size: 5rem;
+}
+.Me-content h1{
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.Me-img{
+    border-radius: 50%;
+}
+.Me-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+}
+.Me-content p{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+.social-icons a:hover{
+    color: white;
+    transform: scale(1.3)translateY(-5px);
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--bg-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+    }
+.btn:hover{
+    transform: scale(1.05);
+    background: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 25px var(--main-color);
+}    
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: 'Geenie';
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+.text-animation span::after{
+    content: '';
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+@keyframes words{
+    0%,
+    20%{
+        content: 'Junnu';
+    }
+    21%,
+    40%{
+        content: 'Jaanie';
+    }
+    41%,
+    60%{
+        content: 'cupcake';
+    }
+    61%,
+    80%{
+        content: 'Sugar Boo';
+    }
+    81%,
+    100%{
+        content: 'DreamInPinkss';
+    }
+}
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width : 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+.heading{
+    text-align: center;
+    font-size: 8rem;
+}
+.Favourites{
+    background-color: var(--second-bg-color);
+}
+.Favourites h2{
+    margin-bottom: 8rem;
+}
+.Favourites-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.Favourites-container .Favourites-box{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--main-color);
+    padding: 3rem 2rem 4rem;
+    height: 550px;
+    border-radius: 2rem;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.Favourites-container .Favourites-box:hover{
+    transform: scale(1.02);
+    background-color: white;
+    color: black;
+}
+.Favourites-box i{
+    font-size: 7rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+.Favourites-box h3{
+    font-size: 2.6rem;
+}
+.Favourites-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+.Favorites-box .btn{
+    background-color: white;
+}
+.Favorites-box .btn:hover{
+    color: var(--main-color);
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
+}
+.MoviesAndSeries{
+    background: var(--bg-color);
+}
+.MoviesAndSeries h2{
+    margin-bottom: 8rem;
+}
+.MoviesAndSeries-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.MoviesAndSeries-container .MoviesAndSeries-box{
+    position: relative;
+    border-radius: 2rem;
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+}
+.MoviesAndSeries-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+.MoviesAndSeries-box:hover img{
+    transform: scale(1.1);
+}
+.MoviesAndSeries-box .MoviesAndSeries-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.MoviesAndSeries-box .MoviesAndSeries-info:hover{
+    background: radial-gradient(rgba(255, 0, 255, 0.8), var(--main-color));
+    transform: scale(1.1);
+}
+.MoviesAndSeries-info h4{
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+}
+.MoviesAndSeries-info p{
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+    font-weight: 600;
+    color: white;
+}
+.MoviesAndSeries-info a{
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: white;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+}
+.MoviesAndSeries-info a i{
+    font-size: 3rem;
+    color: var(--main-color);
+}
+.Hobbies{
+    background-color: var(--second-bg-color);
+}
+.Hobbies h2{
+    margin-bottom: 2rem;
+}
+.Hobbies{
+    margin: 0 auto;
+}
+.Hobbies-bars{
+    margin-top: 8rem;
+    padding: 25px 30px;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.Hobbies-bars .bar{ 
+    margin: 20px 0;
+}
+.Hobbies-bars .bar:first-child{ 
+    margin-top: 0px;
+}
+.Hobbies-bars .bar .info{ 
+    margin-bottom: 5px;
+}    
+.Hobbies-bars .bar .info span{
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 17px;
+}
+.Hobbies-bars .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+}
+.Hobbies .progress-line span{
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+}
+.bar .progress-line.Friends span{
+    width: 100%;
+    background-color: gold;
+}
+.bar .progress-line.Books span{
+    width: 70%;
+    background-color: rgb(58, 58, 255);
+}
+.bar .progress-line.Caring span{
+    width: 90%;
+    background-color: lightskyblue;
+}
+.bar .progress-line.SocialMedia span{
+    width: 60%;
+    background-color: orangered;
+}
+.Colours{
+    background: var(--bg-color);
+}
+.Colours h2{
+    margin-bottom: 8rem;
+}
+.Colours-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.Colours-container .Colours-box{
+    position: relative;
+    border-radius: 2rem;
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+}
+.Colours-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+.Colours-box:hover img{
+    transform: scale(1.1);
+}
+.Colours-box .Colours-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.Colours-box .Colours-info:hover{
+    background: radial-gradient(rgba(255, 0, 255, 0.8), var(--main-color));
+    transform: scale(1.1);
+}
+.Colours-info h4{
+    font-size: 3rem;
+    color: black;
+    font-weight: 800;
+}
+.Colours-info p{
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+    font-weight: 600;
+    color: white;
+}
+.Colours-info a{
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: white;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+}
+.Colours a i{
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
