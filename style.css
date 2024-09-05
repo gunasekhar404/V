@@ -495,6 +495,91 @@ span{
     color: var(--main-color);
 }
 
+@media (max-width: 1200px){
+    html{
+    font-size: 55%;
+    }
+    .MoviesAndSeries-container{
+    padding-bottom: 7rem;
+    grid-template-columns: repeat(1,1fr);
+    margin: 0 5rem;
+    }
+    }
+    @media (max-width: 1000px){
+    header{
+    padding: 2rem 3%;
+    }
+    section{
+    padding: 10rem 3% 2rem;
+    }
+    .Favourites{
+    padding-bottom: 7rem;
+    }
+    .footer{
+    padding: 2rem 3%;
+    }
+}
+    @media (max-width:955px){
+    #menu-icon{
+    display: block;
+    }
+    .navbar{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    border-bottom-left-radius: 2em;
+    padding: 1rem 3%;
+    background: var(--second-bg-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    display: none;
+    }
+    .navbar.active{
+    display: block;
+    }
+    .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    }
+    .Me{
+    flex-direction: column;
+    margin: 5rem 4rem;
+    }
+    .Me-content h3{
+    font-size: 2.6rem;
+    }
+    .Me-content h1{
+    font-size: 5rem;
+    }
+    .Me-img img{
+    width: 70vw;
+    margin-top: 4rem;
+    }
+    .Favourites h2{
+    margin-bottom: 3rem;
+    }
+    .MoviesAndSeries h2{
+    margin-bottom: 3rem;
+    }
+    .timeline-items::before{
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd){
+    padding: 0;
+    text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+    padding-left: 37px;
+    }
+    .timeline-dot{
+    left: 0;
+    }
+}
+
 
 
 
