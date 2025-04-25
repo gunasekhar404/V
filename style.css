@@ -154,7 +154,7 @@ span{
     position: relative;
 }
 .text-animation span::before{
-    content: 'Geenie';
+    content: 'Vyshuu';
     color: var(--main-color);
     animation: words 20s infinite;
 }
@@ -176,23 +176,23 @@ span{
 @keyframes words{
     0%,
     20%{
-        content: 'Junnu';
+        content: 'Vaishnavi';
     }
     21%,
     40%{
-        content: 'Jaanie';
+        content: 'vaishu';
     }
     41%,
     60%{
-        content: 'cupcake';
+        content: 'Sweetie';
     }
     61%,
     80%{
-        content: 'Sugar Boo';
+        content: 'YSHU';
     }
     81%,
     100%{
-        content: 'DreamInPinkss';
+        content: 'Vyshuuu';
     }
 }
 @keyframes typing{
